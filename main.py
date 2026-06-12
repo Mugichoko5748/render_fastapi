@@ -32,7 +32,7 @@ def omikuji():
 
     return omikuji_list[random.randrange(10)]
 
-    from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse
 
 ### コードいろいろ... ###
 
