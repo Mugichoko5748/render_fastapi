@@ -155,3 +155,11 @@ def index():
 
     """
     return HTMLResponse(content=html_content, status_code=200)
+    
+@app.post("/present")
+async def give_present(present):
+    code_list = list(range(len(present)))
+    for i in len(present):
+        c = present[i]
+        code_list.append(ord(c))
+    return {"response": f"サーバです。メリークリスマス！ {present}ありがとう。プレゼントの文字コードは{code_list}でした。"}  # f文字列というPythonの機能を使っている
