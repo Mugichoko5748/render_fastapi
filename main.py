@@ -158,7 +158,7 @@ def index():
 
 @app.post("/present")
 async def give_present(present):
-    code_list = list(range(len(present)))
+    code_list = list()
     for c in present:
         code_list.append(ord(c))
     return {"response": f"サーバです。メリークリスマス！ {present}ありがとう。プレゼントの文字コードは{code_list}でした。"}  # f文字列というPythonの機能を使っている
