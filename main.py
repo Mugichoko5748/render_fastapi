@@ -39,10 +39,7 @@ def omikuji():
 @app.get("/index")
 def index():
     html_content = """
-    <html>
-        <head>
-            <title>
-            <!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8">
@@ -158,11 +155,6 @@ def index():
 		</table>
 	</body>
 </html>
-</title>
-        </head>
-        <body>
-            <h1>Look ma! HTML!</h1>
-        </body>
-    </html>
+
     """
     return HTMLResponse(content=html_content, status_code=200)
